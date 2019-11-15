@@ -32,8 +32,8 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           ListTile(
-            onTap: () => pushNamed(PageNames.SETTINGS, {"title": "打游戏", "content": "送人头5个"}),
-            title: Text("设置"),
+            onTap: () => pushNamed(PageNames.LOGIN),
+            title: Text("登录"),
           ),
           ListTile(
             onTap: () => pushNamed(PageNames.SETTINGS, {"title": "打酱油", "content": "1斤酱油"}),
@@ -52,3 +52,5 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
+
+

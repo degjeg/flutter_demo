@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-typedef Widget RouteWidgetBuilder(BuildContext ctx, dynamic parameter);
+typedef Widget RouteWidgetBuilder(dynamic parameter);
 typedef Route RouteBuilder(dynamic parameter);
 
 NavigatorObserver navigatorObserver = NavigatorObserver();
@@ -14,7 +14,7 @@ Route<dynamic> generateRoute(RouteSettings setting) {
   print("generateRoute ${setting.name} $builder");
   if (builder is RouteWidgetBuilder) {
     return MaterialPageRoute(builder: (ctx) {
-      return builder(ctx, setting.arguments);
+      return builder(setting.arguments);
     });
   } else if (builder is RouteBuilder) {
     return builder(setting.arguments);
