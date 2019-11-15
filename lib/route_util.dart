@@ -25,3 +25,5 @@ Route<dynamic> generateRoute(RouteSettings setting) {
 Future pushNamed(String page, [Object arg]) {
   return navigatorObserver.navigator.pushNamed(page, arguments: arg);
 }
+
+NavigatorState navigator() => navigatorObserver.navigator;
